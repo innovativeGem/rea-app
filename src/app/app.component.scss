@@ -13,3 +13,29 @@ h1, h2 {
   text-transform: uppercase;
   font-family: $font-family;
 }
+
+.propertyList {
+  min-width: 300px;
+  float: left;
+  margin-left: 18vw;
+}
+
+.savedProperties {
+  @extend .propertyList;
+  margin-left: 1vw;
+}
+
+.card {
+  margin: 2%;
+  display: block;
+}
+
+.card-block, .icons-sm {
+  padding: 2%;
+}
+
+@media (max-width: 780px) {
+  .propertyList {
+    margin-left: 0;
+  }
+}
