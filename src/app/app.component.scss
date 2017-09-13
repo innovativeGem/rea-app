@@ -1,0 +1,15 @@
+$themeColor: #e4002b;
+$font-family: Arial, sans-serif;
+
+h1 {
+  background: $themeColor;
+  padding: 2% 0;
+  color: #fff;
+  margin: 0;
+}
+
+h1, h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: $font-family;
+}
