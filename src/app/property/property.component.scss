@@ -1,3 +1,14 @@
 .card-block, .icons-sm {
   padding: 2%;
 }
+
+.btn {
+  position: relative;
+  left: 80%;
+  margin-right: 2%;
+  // display: none;
+}
+
+.btn-display {
+  display: block;
+}
