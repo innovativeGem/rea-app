@@ -2,33 +2,15 @@
 
 <div class="propertyList col-xs-10 col-md-4">
   <h2>Properties</h2>
-  <div class="card">
-  <div>
-      <img class="icons-sm" src="http://via.placeholder.com/50x50" alt="Card logo">
-  </div>
-
-    <img class="card-img-top" src="http://via.placeholder.com/350x200" alt="Card image">
-    <div class="card-block">
-      <h4 class="card-title">Special title treatment</h4>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+  <div class="card" *ngFor="let p of properties | async">
+    <app-property [p]="p"></app-property>
   </div>
 </div>
 
 <div class="savedProperties col-xs-10 col-md-4">
   <h2>Saved Properties</h2>
-  <div class="card">
-  <div>
-      <img class="icons-sm" src="http://via.placeholder.com/50x50" alt="Card logo">
-  </div>
-
-    <img class="card-img-top" src="http://via.placeholder.com/350x200" alt="Card image">
-    <div class="card-block">
-      <h4 class="card-title">Special title treatment</h4>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+  <div class="card" *ngFor="let sp of savedProperties | async">
+      <app-property [p]="sp"></app-property>
   </div>
 
 </div>

@@ -4,10 +4,12 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PropertyService } from './property.service';
+import { PropertyComponent } from './property/property.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PropertyComponent
   ],
   imports: [
     BrowserModule,
