@@ -1,6 +1,10 @@
-# ReaApp
+# Real Estate App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.3.0.
+Created an app for Real Estate to list their properties and save them.
+
+  - Used Andular CLI to create this project
+  - Bootstrap4 and SCSS
+
 
 ## Development server
 
