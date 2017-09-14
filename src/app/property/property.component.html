@@ -8,12 +8,6 @@
   <img class="card-img-top" src="{{p.mainImage}}" alt="Card image">
   <div class="card-block">
     <h4 class="card-title">{{p.price}}</h4>
-    <!--
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    -->
-    <!--
-      [ngClass]="{'btn-display': btnDisplay, 'btn': !btnDisplay}"
-    -->
-    <a href="#" class="btn btn-primary" [ngClass]="{'btn': isBtnVisible, 'btn-hide': !isBtnVisible}" (click)="handleSaveEvent(p)">{{true ? 'Save' : 'Remove'}}</a>
+    <a href="#" class="btn btn-primary" [ngClass]="{'btn': isBtnVisible, 'btn-hide': !isBtnVisible}" (click)="handleSaveEvent(p)">{{isspbtn ? 'Remove Property' : 'Add Property'}}</a>
   </div>
 </div>

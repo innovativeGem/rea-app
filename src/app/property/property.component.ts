@@ -1,7 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { PropertyService } from '../property.service';
-
 @Component({
   selector: 'app-property',
   templateUrl: './property.component.html',
@@ -12,34 +10,21 @@ export class PropertyComponent implements OnInit {
   @Input() p;
   @Output() saveBtnClicked = new EventEmitter();
   brandColor: String;
+  isBtnVisible: Boolean = false;
+  isspbtn: Boolean;
+
   // @Input() isBtnVisible: Boolean = false;
 
-  constructor(private _propertyService: PropertyService) {
-    const isBtnVisible: Boolean = false;
-  }
+  constructor() { }
 
   handleSaveEvent(obj) {
     this.saveBtnClicked.emit(obj);
-    /*
-    const savProps = this._propertyService.savedProps;
-    savProps.forEach(e => {
-      console.log(e);
-      e.forEach(p => {
-        console.log(p.id);
-        if (p.id !== obj.id) {
-          // this._propertyService.props.merge(obj);
-        }
-      });
-      // savProps.merge(e);
-    });
-    console.log(obj.id + ' savProps: ' + savProps);
-    // savProps = savProps.filter(savProp => savProp[0].id !== obj.id);
-    // console.log('savProps2: ' + savProps);
-    // console.log('properties from child: ' + this._propertyService.props);
-    this._propertyService.props.forEach(e => {
-      console.log('e: ' + e[0].id);
-    });
-    */
+    this.swapBtns(obj);
+  }
+
+  swapBtns(obj) {
+    // console.log('obj class: ' + obj.getAttribute('class'));
+      this.isspbtn = false;
   }
 
   ngOnInit() {

@@ -4,10 +4,14 @@
 
 .btn {
   position: relative;
-  min-width: 80px;
-  left: calc(100% - 80px);
+  width: 100%;
+  text-align: center;
+  // left: calc(100% - 156px);
+  // right: 5px;
   margin-right: 2%;
-  // display: none;
+  background: #e4002b;
+  border-color: #E4221A;
+  cursor: pointer;
 }
 
 .btn-hide {
