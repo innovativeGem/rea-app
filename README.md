@@ -5,28 +5,56 @@ Created an app for Real Estate to list their properties and save them.
   - Used Andular CLI to create this project
   - Bootstrap4 and SCSS
 
+### Tech
 
-## Development server
+* [Angular CLI](https://cli.angular.io/) - HTML enhanced for web apps!
+* [node.js](https://nodejs.org/en/) - fast node.js network app framework
+* [Twitter Bootstrap](https://v4-alpha.getbootstrap.com/getting-started/download/) - great UI boilerplate for modern web apps
+* [SCSS](http://sass-lang.com/install) - CSS preprocessor 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Installation
 
-## Code scaffolding
+Open Terminal/Command prompt on your system.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Install the dependencies and devDependencies and start the server.
 
-## Build
+```sh
+$ git clone https://github.com/innovativeGem/rea-app.git
+$ npm install
+$ ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+For production environments...
 
-## Running unit tests
+```sh
+$ ng build
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Plugins
 
-## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+### Development Status
 
-## Further help
+What i managed to achieve so far?
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+> Added 2 columns for property list and Saved properties
+> Loaded Mock JSON data into my application
+> Create a Service to load JSON data
+> Added another child Property component to hold my card template
+> Make app responsive
+> Click on the "Save" button shows property id in console.log() window
+
+### Hick-ups
+Due to time constrains i was not able to
+ - make the button show only on card roll-over
+ - Add property to Saved list when clicked and vise versa
+ - Unit tests
+
+### Next steps
+
+ - Fix the mouseover event on card to show button only on roll-over
+ - Add property to Saved list when clicked and vise versa
+ - Unit tests
+
+Regards!
+ 
