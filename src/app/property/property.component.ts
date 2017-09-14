@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 import { PropertyService } from '../property.service';
 
@@ -10,13 +10,16 @@ import { PropertyService } from '../property.service';
 export class PropertyComponent implements OnInit {
 
   @Input() p;
+  @Input() sp;
+  @Output() saveBtnClicked = new EventEmitter();
   brandColor: String;
   btnDisplay: Boolean;
 
   constructor(private _propertyService: PropertyService) { }
 
-  addRemoveObj(obj) {
+  handleSaveEvent(obj) {
     console.log(obj.id);
+    this.saveBtnClicked.emit(obj);
     /*
     const savProps = this._propertyService.savedProps;
     savProps.forEach(e => {

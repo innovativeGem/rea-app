@@ -2,15 +2,15 @@
 
 <div class="propertyList col-xs-10 col-md-4">
   <h2>Properties</h2>
-  <div class="card" *ngFor="let p of properties | async">
-    <app-property [p]="p"></app-property>
+  <div class="card" *ngFor="let p of properties">
+    <app-property (saveBtnClicked)="handleEventSaved($event)" [p]="p"></app-property>
   </div>
 </div>
 
 <div class="savedProperties col-xs-10 col-md-4">
   <h2>Saved Properties</h2>
-  <div class="card" *ngFor="let sp of savedProperties | async">
-      <app-property [p]="sp"></app-property>
+  <div class="card" *ngFor="let sp of savedProperties">
+      <app-property (saveBtnClicked)="handleEventRemove($event)"  [p]="sp"></app-property>
   </div>
 
 </div>
