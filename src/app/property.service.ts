@@ -12,24 +12,6 @@ export class PropertyService {
 
   constructor(private _http: Http) { }
 
-//  getProperties() {
-    /*
-    this._http.get(PROPERTIES_URL)
-    .map((res: Response) => this.data = res.json());
-    */
-    /*
-    this.props = this._http.get(PROPERTIES_URL)
-    .map((res: Response) => res.json().results);
-    this.savedProps = this._http.get(PROPERTIES_URL)
-    .map((res: Response) => res.json().saved);
-    */
-/*
-    return this._http.get(PROPERTIES_URL)
-    .map((res: Response) => res.json().results);
-
-  }
-*/
-
   getProperties() {
     return this._http.get(PROPERTIES_URL)
     .map((res: Response) => res.json());

@@ -1,17 +1,19 @@
-<div class="card-header" [style.background]="brandColor">
-    <img class="icons-sm" src="{{p.agency.logo}}" alt="Card logo">
-</div>
-<!--
-  (mouseover)="btnDisplay = btnDisplay === false ? true : false"
--->
-<img class="card-img-top" src="{{p.mainImage}}" alt="Card image">
-<div class="card-block">
-  <h4 class="card-title">{{p.price}}</h4>
+<div (mouseover)="isBtnVisible = true" (mouseleave)="isBtnVisible = false">
+  <div class="card-header" [style.background]="brandColor">
+      <img class="icons-sm" src="{{p.agency.logo}}" alt="Card logo">
+  </div>
   <!--
-  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    (mouseover)="btnDisplay = btnDisplay === false ? true : false"
   -->
-  <!--
-    [ngClass]="{'btn-display': btnDisplay, 'btn': !btnDisplay}"
-  -->
-  <a href="#" class="btn btn-primary" (click)="handleSaveEvent(p)">{{true ? 'Save' : 'Remove'}}</a>
+  <img class="card-img-top" src="{{p.mainImage}}" alt="Card image">
+  <div class="card-block">
+    <h4 class="card-title">{{p.price}}</h4>
+    <!--
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    -->
+    <!--
+      [ngClass]="{'btn-display': btnDisplay, 'btn': !btnDisplay}"
+    -->
+    <a href="#" class="btn btn-primary" [ngClass]="{'btn': isBtnVisible, 'btn-hide': !isBtnVisible}" (click)="handleSaveEvent(p)">{{true ? 'Save' : 'Remove'}}</a>
+  </div>
 </div>

@@ -10,15 +10,15 @@ import { PropertyService } from '../property.service';
 export class PropertyComponent implements OnInit {
 
   @Input() p;
-  @Input() sp;
   @Output() saveBtnClicked = new EventEmitter();
   brandColor: String;
-  btnDisplay: Boolean;
+  // @Input() isBtnVisible: Boolean = false;
 
-  constructor(private _propertyService: PropertyService) { }
+  constructor(private _propertyService: PropertyService) {
+    const isBtnVisible: Boolean = false;
+  }
 
   handleSaveEvent(obj) {
-    console.log(obj.id);
     this.saveBtnClicked.emit(obj);
     /*
     const savProps = this._propertyService.savedProps;
@@ -44,7 +44,6 @@ export class PropertyComponent implements OnInit {
 
   ngOnInit() {
     this.brandColor = this.p.agency.brandingColors.primary;
-    this.btnDisplay = false;
   }
 
 }

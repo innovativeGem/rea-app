@@ -4,11 +4,12 @@
 
 .btn {
   position: relative;
-  left: 80%;
+  min-width: 80px;
+  left: calc(100% - 80px);
   margin-right: 2%;
   // display: none;
 }
 
-.btn-display {
-  display: block;
+.btn-hide {
+  display: none;
 }
