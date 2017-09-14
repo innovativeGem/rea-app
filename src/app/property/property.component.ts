@@ -19,16 +19,18 @@ export class PropertyComponent implements OnInit {
 
   handleSaveEvent(obj) {
     this.saveBtnClicked.emit(obj);
-    this.swapBtns(obj);
+    // this.swapBtns(obj);
   }
 
-  swapBtns(obj) {
+  swapBtns() {
     // console.log('obj class: ' + obj.getAttribute('class'));
-      this.isspbtn = false;
+      this.isspbtn = true;
+      console.log('swapBtns: ');
   }
 
   ngOnInit() {
     this.brandColor = this.p.agency.brandingColors.primary;
+    this.isspbtn = false;
   }
 
 }

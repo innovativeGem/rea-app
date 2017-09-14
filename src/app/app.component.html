@@ -10,7 +10,7 @@
 <div class="savedProperties col-xs-10 col-md-4">
   <h2>Saved Properties</h2>
   <div class="card" *ngFor="let sp of savedProperties">
-      <app-property (saveBtnClicked)="handleEventRemove($event)" [p]="sp" class="spcard"></app-property>
+      <app-property (saveBtnClicked)="handleEventRemove($event)" [p]="sp" #savedprops class="spcard"></app-property>
   </div>
 
 </div>

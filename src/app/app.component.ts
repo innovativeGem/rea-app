@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewChildren, QueryList, AfterViewInit, ElementRef } from '@angular/core';
 import { Observable } from 'rxjs/Rx';
 import { PropertyService } from './property.service';
+
+import { PropertyComponent } from './property/property.component';
 
 @Component({
   selector: 'app-root',
@@ -10,12 +12,15 @@ import { PropertyService } from './property.service';
     PropertyService
   ],
 })
-export class AppComponent implements OnInit  {
+export class AppComponent implements OnInit, AfterViewInit  {
   self = this;
   // properties: Observable<any[]>;
   // savedProperties: Observable<any[]>;
   properties: any[] = [];
   savedProperties: any[] = [];
+
+  @ViewChildren('savedprops') props: QueryList<ElementRef>;
+  // @ViewChild(PropertyComponent) prop: PropertyComponent;
 
   constructor(private _propertyService: PropertyService) { }
 
@@ -41,6 +46,23 @@ export class AppComponent implements OnInit  {
     this._propertyService.getProperties();
     // this._propertyService.getProperties2();
     this.loadProperties();
+  }
+
+  ngAfterViewInit() {
+    // this.props.forEach(propInstance => console.log(propInstance));
+    // console.log(this.props);
+    this.props.changes.subscribe(changes => {
+      console.log(changes);
+      // changes.nativeElement.isspbtn = false;
+      /*
+      this.props.forEach(e => {
+        e.nativeElement.isspbtn = true;
+      });
+      */
+    });
+
+    // this.prop.swapBtns(this.prop);
+    // console.log(this.prop);
   }
 
 }
