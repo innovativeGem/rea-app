@@ -9,9 +9,14 @@
   // left: calc(100% - 156px);
   // right: 5px;
   margin-right: 2%;
+  background: #19A322;
+  border-color: #15941B;
+  cursor: pointer;
+}
+
+.remove-btn {
   background: #e4002b;
   border-color: #E4221A;
-  cursor: pointer;
 }
 
 .btn-hide {

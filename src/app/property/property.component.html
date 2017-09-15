@@ -1,13 +1,10 @@
 <div (mouseover)="isBtnVisible = true" (mouseleave)="isBtnVisible = false">
   <div class="card-header" [style.background]="brandColor">
-      <img class="icons-sm" src="{{p.agency.logo}}" alt="Card logo">
+      <img class="icons-sm" src="{{p?.agency?.logo}}" alt="Card logo">
   </div>
-  <!--
-    (mouseover)="btnDisplay = btnDisplay === false ? true : false"
-  -->
-  <img class="card-img-top" src="{{p.mainImage}}" alt="Card image">
+  <img class="card-img-top" src="{{p?.mainImage}}" alt="Card image">
   <div class="card-block">
-    <h4 class="card-title">{{p.price}}</h4>
-    <a href="#" class="btn btn-primary" [ngClass]="{'btn': isBtnVisible, 'btn-hide': !isBtnVisible}" (click)="handleSaveEvent(p)">{{true ? 'Remove Property' : 'Add Property'}}</a>
+    <h4 class="card-title">{{p?.price}}</h4>
+    <a href="#" class="btn-primary" [ngClass]="{'btn': isBtnVisible, 'btn-hide': !isBtnVisible, 'remove-btn': isspbtn}" (click)="handleSaveEvent(p)">{{(isspbtn) ? 'Remove Property' : 'Add Property'}}</a>
   </div>
 </div>

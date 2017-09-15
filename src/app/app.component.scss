@@ -1,11 +1,14 @@
-$themeColor: #e4002b;
-$font-family: Arial, sans-serif;
+$themeColor: #eee;
+$h1color: #e4002b;
+$font-family: Helvetica, Arial, sans-serif;
 
-h1 {
+header {
   background: $themeColor;
-  padding: 2% 0;
-  color: #fff;
   margin: 0;
+  img {
+    margin-left: calc((100vw - 255px)/2);
+    padding: 2%;
+  }
 }
 
 h1, h2 {
@@ -22,6 +25,7 @@ h2 {
   min-width: 300px;
   float: left;
   margin-left: 18vw;
+  margin-bottom: 5%;
 }
 
 .savedProperties {
