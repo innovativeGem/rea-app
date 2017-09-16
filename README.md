@@ -1,9 +1,6 @@
-# Real Estate App
+# Rea App
 
-Created an app for Real Estate to list their properties and save them.
-
-  - Used Andular CLI to create this project
-  - Bootstrap4 and SCSS
+Created an app for Rea Group to list their properties and save them.
 
 ### Tech
 
@@ -30,31 +27,19 @@ For production environments...
 $ ng build
 ```
 
-### Plugins
 
+### Accomplishment
 
-### Development Status
+As per the project brief, i have achieved following 
 
-What i managed to achieve so far?
-
-> Added 2 columns for property list and Saved properties
+> Added 2 columns for property list and saved properties
 > Loaded Mock JSON data into my application
-> Create a Service to load JSON data
+> Created a Service to load JSON data
 > Added another child Property component to hold my card template
-> Make app responsive
-> Click on the "Save" button shows property id in console.log() window
+> Make app responsive using SCSS and Bootstrap
+> Unit tested my application without any errors
+> I have taken 3 screenshots of my work and placed it in root directory ([Desktop](./localhost-4200-dist-index.html.png), [Mobile](./localhost-4200-dist-index-mob.html.png), [Karma Unit Tests](./localhost-9876--id=45421272.png))
 
-### Hick-ups
-Due to time constrains i was not able to
- - make the button show only on card roll-over
- - Add property to Saved list when clicked and vise versa
- - Unit tests
 
-### Next steps
-
- - Fix the mouseover event on card to show button only on roll-over
- - Add property to Saved list when clicked and vise versa
- - Unit tests
-
-Regards!
+### Thank you!
  
